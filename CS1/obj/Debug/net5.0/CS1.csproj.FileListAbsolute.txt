@@ -1,0 +1,16 @@
+D:\Dev\PCS2021\CS1\bin\Debug\net5.0\CS1.exe
+D:\Dev\PCS2021\CS1\bin\Debug\net5.0\CS1.deps.json
+D:\Dev\PCS2021\CS1\bin\Debug\net5.0\CS1.runtimeconfig.json
+D:\Dev\PCS2021\CS1\bin\Debug\net5.0\CS1.runtimeconfig.dev.json
+D:\Dev\PCS2021\CS1\bin\Debug\net5.0\CS1.dll
+D:\Dev\PCS2021\CS1\bin\Debug\net5.0\ref\CS1.dll
+D:\Dev\PCS2021\CS1\bin\Debug\net5.0\CS1.pdb
+D:\Dev\PCS2021\CS1\obj\Debug\net5.0\CS1.csprojAssemblyReference.cache
+D:\Dev\PCS2021\CS1\obj\Debug\net5.0\CS1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\PCS2021\CS1\obj\Debug\net5.0\CS1.AssemblyInfoInputs.cache
+D:\Dev\PCS2021\CS1\obj\Debug\net5.0\CS1.AssemblyInfo.cs
+D:\Dev\PCS2021\CS1\obj\Debug\net5.0\CS1.csproj.CoreCompileInputs.cache
+D:\Dev\PCS2021\CS1\obj\Debug\net5.0\CS1.dll
+D:\Dev\PCS2021\CS1\obj\Debug\net5.0\ref\CS1.dll
+D:\Dev\PCS2021\CS1\obj\Debug\net5.0\CS1.pdb
+D:\Dev\PCS2021\CS1\obj\Debug\net5.0\CS1.genruntimeconfig.cache

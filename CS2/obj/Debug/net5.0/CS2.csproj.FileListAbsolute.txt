@@ -1,0 +1,16 @@
+D:\Dev\PCS2021\CS2\bin\Debug\net5.0\CS2.exe
+D:\Dev\PCS2021\CS2\bin\Debug\net5.0\CS2.deps.json
+D:\Dev\PCS2021\CS2\bin\Debug\net5.0\CS2.runtimeconfig.json
+D:\Dev\PCS2021\CS2\bin\Debug\net5.0\CS2.runtimeconfig.dev.json
+D:\Dev\PCS2021\CS2\bin\Debug\net5.0\CS2.dll
+D:\Dev\PCS2021\CS2\bin\Debug\net5.0\ref\CS2.dll
+D:\Dev\PCS2021\CS2\bin\Debug\net5.0\CS2.pdb
+D:\Dev\PCS2021\CS2\obj\Debug\net5.0\CS2.csprojAssemblyReference.cache
+D:\Dev\PCS2021\CS2\obj\Debug\net5.0\CS2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\PCS2021\CS2\obj\Debug\net5.0\CS2.AssemblyInfoInputs.cache
+D:\Dev\PCS2021\CS2\obj\Debug\net5.0\CS2.AssemblyInfo.cs
+D:\Dev\PCS2021\CS2\obj\Debug\net5.0\CS2.csproj.CoreCompileInputs.cache
+D:\Dev\PCS2021\CS2\obj\Debug\net5.0\CS2.dll
+D:\Dev\PCS2021\CS2\obj\Debug\net5.0\ref\CS2.dll
+D:\Dev\PCS2021\CS2\obj\Debug\net5.0\CS2.pdb
+D:\Dev\PCS2021\CS2\obj\Debug\net5.0\CS2.genruntimeconfig.cache
