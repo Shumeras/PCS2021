@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Dev\WpfApp2\obj\Debug\
+D:\Dev\PCS2021\WpfApp2\obj\Debug\
 WpfApp2
 none
 false
 DEBUG;TRACE
-D:\Dev\WpfApp2\App.xaml
-11151548125
+D:\Dev\PCS2021\WpfApp2\App.xaml
+41849326002
 
-8-668498311
+161515103017
 13152784993
-MainWindow.xaml;
+MainWindow.xaml;ResourceDictionaries\Colors.xaml;Views\DataPage.xaml;Views\ReportPage.xaml;
 
 True
 

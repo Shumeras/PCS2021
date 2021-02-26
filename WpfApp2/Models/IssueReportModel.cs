@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp2.Models
 {
-    enum IssueType
+    public enum IssueType
     {
         BUG,
         DOCUMENTATION,
@@ -14,8 +14,13 @@ namespace WpfApp2.Models
         NOTICE
     }
 
-    class IssueReportModel
+    class IssueReportModel: ICloneable
     {
+        public virtual object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+
         public string IssueId { get; set; }
         public string RegisteringUser { get; set; }
         public DateTime RegistrationDate { get; set; }
@@ -23,6 +28,7 @@ namespace WpfApp2.Models
         public string Decription { get; set; }
         public IssueType IssueType { get; set; }
         public bool IsUrgent { get; set; }
-    
+
+        
     }
 }

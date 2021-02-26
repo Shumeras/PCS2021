@@ -1,0 +1,43 @@
+﻿<Page x:Class="WpfApp2.Views.DataPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2.Views"
+      xmlns:dm="clr-namespace:WpfApp2.Models"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="White"
+      Height="600" Width="400"
+      Title="DataPage">
+    <ListView ItemsSource="{Binding IssueReports}">
+        <ListView.ItemTemplate>
+            <DataTemplate DataType="{x:Type dm:IssueReportModel}">
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.Background>
+                        <SolidColorBrush Color="{StaticResource AcceptColor}"/>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.RowSpan="3" Grid.ColumnSpan="2" BorderThickness="1" BorderBrush="Black"/>
+
+                    <Label Margin="2" Grid.Row="0" Content="Title:"/>
+                    <Label Margin="2" Grid.Row="1" Content="Registerd by:"/>
+                    <Label Margin="2" Grid.Row="2" Content="Date:"/>
+
+                    <TextBlock Margin="2" Grid.Row="0" Grid.Column="1" Text="{Binding Title}"/>
+                    <TextBlock Margin="2" Grid.Row="1" Grid.Column="1" Text="{Binding RegisteringUser}"/>
+                    <TextBlock Margin="2" Grid.Row="2" Grid.Column="1" Text="{Binding RegistrationDate}"/>
+                </Grid>
+            </DataTemplate>      
+        </ListView.ItemTemplate>
+    </ListView>
+</Page>

@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApp2.ResourceDictionaries">
+
+    <Color x:Key="AcceptColor">#aaffaa</Color>
+    <Color x:Key="CancelColor">#ffaaaa</Color>
+    
+</ResourceDictionary>

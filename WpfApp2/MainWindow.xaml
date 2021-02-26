@@ -4,79 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
+        xmlns:c="clr-namespace:WpfApp2.Controls"
+        xmlns:converters="clr-namespace:WpfApp2.Converters"
+        xmlns:dm="clr-namespace:WpfApp2.Models"
         mc:Ignorable="d"
-        Title="Report" Height="600" Width="400">
-    <StackPanel Margin="5">
+        Title="Report" Height="600" Width="420"
+       
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <Label>Issue ID</Label>
-        <TextBox Text="{Binding IssueId}" IsEnabled="False" Margin="5 0"></TextBox>
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="5" Click="ReportPageButtonClicked">Report Page</Button>
+            <Button Margin="5" Click="DataPageButtonClicked">Data Page</Button>
+        </StackPanel>
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Content="{Binding CurrentPage}"></Frame>
         
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="28*"></ColumnDefinition>
-                <ColumnDefinition Width="237*"/>
-                <ColumnDefinition Width="5"></ColumnDefinition>
-                <ColumnDefinition Width="auto"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
-            </Grid.RowDefinitions>
+    </Grid>
 
-            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">Username</Label>
-            <TextBox Text="{Binding RegisteringUser}" Name="Username_TextBox" Grid.Column="0" Grid.Row="1" Margin="5 0" Grid.ColumnSpan="2"></TextBox>
-
-            <Label Grid.Column="3" Grid.Row="0">Registration Date</Label>
-            <DatePicker SelectedDate="{Binding RegistrationDate}" Name="Registration_DatePicker" Grid.Column="3" Grid.Row="1" Margin="5 0"></DatePicker>
-        </Grid>
-
-        <Label>Title</Label>
-        <TextBox Text="{Binding Title}" Name="Title_TextBox" Margin="5 0"></TextBox>
-
-        <Label>Type of issue</Label>
-        <Border BorderThickness="2" BorderBrush="Gray">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"></ColumnDefinition>
-                    <ColumnDefinition Width="auto"></ColumnDefinition>
-                    <ColumnDefinition Width="auto"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-
-                <RadioButton Name="Bug_RadioButton" GroupName="IssueTypeRadioButtons" Margin="5" Grid.Column="0" >Bug</RadioButton>
-                <RadioButton Name="Documentation_RadioButton" GroupName="IssueTypeRadioButtons" Margin="5" Grid.Column="1">Documentation</RadioButton>
-                <RadioButton Name="Performance_RadioButton" GroupName="IssueTypeRadioButtons" Margin="5" Grid.Column="2">Performance</RadioButton>
-                <RadioButton Name="Notice_RadioButton" GroupName="IssueTypeRadioButtons" Margin="5" Grid.Column="3">Notice</RadioButton>
-
-            </Grid>
-        </Border>
-
-        <Label>Description</Label>
-        <TextBox Text="{Binding Description}"
-                Name="Description_TextBox" 
-                Height="150"
-                TextWrapping="Wrap"
-                HorizontalAlignment="Stretch"
-                AcceptsReturn="True"
-                AcceptsTab="True"
-                Margin="5 0 5 5"
-                HorizontalContentAlignment="Left"
-                VerticalContentAlignment="Top">
-        </TextBox>
-
-        <CheckBox Name="Urgent_CheckBox" Margin="5">Urgent</CheckBox>
-        
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="2*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-
-            <Button Margin="5" Grid.Column="0" Click="Button_Click">Clear</Button>
-            <Button Margin="5" Grid.Column="1">Submit</Button>
-
-        </Grid>
-
-    </StackPanel>
 </Window>

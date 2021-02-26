@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,53 +13,53 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp2.Commands;
 using WpfApp2.ViewModels;
+using WpfApp2.Views;
 
 namespace WpfApp2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        private Page currentPage = new ReportPage();
+
+        private ReportPage reportPage = new ReportPage();
+        private DataPage dataPage = new DataPage();
+
         //public string Temp { get; set; } = "this";
 
-        ReportPageViewModel vm = new ReportPageViewModel();
-        
+        public Page CurrentPage
+        {
+            get => currentPage;
+            set
+            {
+                currentPage = value;
+                PropertyChanged(this, new PropertyChangedEventArgs("CurrentPage"));
+            }
+        } 
+
+        public event PropertyChangedEventHandler PropertyChanged = (c, o) => {};
+
+        private void ReportPageButtonClicked(object sender, RoutedEventArgs e)
+        {
+            CurrentPage = reportPage;
+        }
+
+        private void DataPageButtonClicked(object sender, RoutedEventArgs e)
+        {
+            dataPage.UpdateData();
+            CurrentPage = dataPage;
+        }
 
         public MainWindow()
         {
-            vm.Data = new Models.IssueReportModel();
-
+            DataContext = this;
             InitializeComponent();
-
-            DataContext = vm;
-            
-
-            Clear();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Clear();
-        }
-
-        private void Clear()
-        {
-            vm.IssueId = Guid.NewGuid().ToString();
-            vm.RegisteringUser = "Some user";
-            vm.Title = "Some title";
-            vm.Description= "desc";
-
-            vm.RegistrationDate = DateTime.Now;
-            vm.IsUrgent = false;
-        }
-
-        private void Submit()
-        {
-
-            Clear();
-        }
 
 
     }

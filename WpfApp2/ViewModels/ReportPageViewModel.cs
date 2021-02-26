@@ -11,13 +11,6 @@ namespace WpfApp2.ViewModels
 {
     class ReportPageViewModel : INotifyPropertyChanged
     {
-        private string issueId;
-        private string registeringUser;
-        private DateTime registrationDate;
-        private string title = "This is a title";
-        private string decription;
-        private IssueType issueType;
-        private bool isUrgent;
 
         public event PropertyChangedEventHandler PropertyChanged = (o, e) => 
         {
@@ -39,55 +32,55 @@ namespace WpfApp2.ViewModels
         }
         public string RegisteringUser
         {
-            get => registeringUser;
+            get => Data.RegisteringUser;
             set
             {
-                registeringUser = value;
+                Data.RegisteringUser = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("RegisteringUser"));
             }
         }
         public DateTime RegistrationDate
         {
-            get => registrationDate;
+            get => Data.RegistrationDate;
             set
             {
-                registrationDate = value;
+                Data.RegistrationDate = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("RegistrationDate"));
             }
         }
         public string Title
         {
-            get => title;
+            get => Data.Title;
             set
             {
-                title = value;
+                Data.Title = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("Title"));
             }
         }
         public string Description
         {
-            get => decription;
+            get => Data.Decription;
             set
             {
-                decription = value;
+                Data.Decription = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("Description"));
             }
         }
         public IssueType IssueType
         {
-            get => issueType;
+            get => Data.IssueType;
             set
             {
-                issueType = value;
+                Data.IssueType = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("IssueId"));
             }
         }
         public bool IsUrgent 
         { 
-            get => isUrgent; 
+            get => Data.IsUrgent; 
             set 
             {
-                isUrgent = value;
+                Data.IsUrgent = value;
                 PropertyChanged(this, new PropertyChangedEventArgs("IsUrgent"));
             } 
         }

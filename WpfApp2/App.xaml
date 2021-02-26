@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:WpfApp2"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionaries/Colors.xaml"></ResourceDictionary>  
+            </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="AcceptSolidBrush" Color="{StaticResource AcceptColor}"></SolidColorBrush>
+            <SolidColorBrush x:Key="CancelSolidBrush" Color="{StaticResource CancelColor}"></SolidColorBrush>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
