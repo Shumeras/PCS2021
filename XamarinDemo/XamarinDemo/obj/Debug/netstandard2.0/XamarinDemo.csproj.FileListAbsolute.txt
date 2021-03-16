@@ -1,0 +1,17 @@
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\bin\Debug\netstandard2.0\XamarinDemo.deps.json
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\bin\Debug\netstandard2.0\XamarinDemo.dll
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\bin\Debug\netstandard2.0\ref\XamarinDemo.dll
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\bin\Debug\netstandard2.0\XamarinDemo.pdb
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.AssemblyInfoInputs.cache
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.AssemblyInfo.cs
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.csproj.CoreCompileInputs.cache
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.dll
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\ref\XamarinDemo.dll
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.pdb
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\XamarinDemo.csprojAssemblyReference.cache
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\Views\PresetPage.xaml.g.cs
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\Views\TimerPage.xaml.g.cs
+D:\Dev\PCS2021\XamarinDemo\XamarinDemo\obj\Debug\netstandard2.0\Controls\IntervalCell.xaml.g.cs

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="XamarinDemo.Controls.IntervalCell"
+          x:Name="Self">
+  <ViewCell.View>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry Text="{Binding Name}" VerticalOptions="End"/>
+
+            <StackLayout Grid.Column="1" Orientation="Horizontal">
+                <Picker SelectedItem="{Binding Hours}" ItemsSource="{Binding HourList, Source={Reference Self}}"/>
+                <Label VerticalTextAlignment="Center" FontSize="Small" Text=":"/>
+                <Picker SelectedItem="{Binding Minutes}" ItemsSource="{Binding MinuteList, Source={Reference Self}}"/>
+                <Label VerticalTextAlignment="Center" FontSize="Small" Text=":"/>
+                <Picker SelectedItem="{Binding Seconds}" ItemsSource="{Binding SecondList, Source={Reference Self}}"/>
+            </StackLayout>
+
+            <Button Grid.Column="2" BackgroundColor="Red" Text="X" Margin="5" Padding="5"
+                    Command="{Binding DeleteCommand, Source={Reference Self}}" 
+                    CommandParameter="{Binding DeleteCommandParameter, Source={Reference Self}}"/>
+        </Grid>
+  </ViewCell.View>
+</ViewCell>
