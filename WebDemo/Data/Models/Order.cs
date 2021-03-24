@@ -11,9 +11,11 @@ namespace Data.Models
         
         [Required]
         public DateTime Date { get; set; }
-
         [Required]
         public Customer Customer { get; set; }
+
+
+
         public ICollection<OrderProduct> OrderProducts { get; set; }
 
     }

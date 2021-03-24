@@ -14,6 +14,9 @@ namespace Data.Models
         [Required]
         public float Price { get; set; }
 
+        [StringLength(512)]
+        public string ImageURL { get; set; }
+
         public ICollection<OrderProduct> OrderProducts { get; set; }
 
     }
