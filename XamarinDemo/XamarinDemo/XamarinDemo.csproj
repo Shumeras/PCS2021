@@ -11,6 +11,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\pause.png" />
+    <None Remove="Resources\play.png" />
+    <None Remove="Resources\skip_next.png" />
+    <None Remove="Resources\skip_previous.png" />
+    <None Remove="Resources\stop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\pause.png" />
+    <EmbeddedResource Include="Resources\play.png" />
+    <EmbeddedResource Include="Resources\skip_next.png" />
+    <EmbeddedResource Include="Resources\skip_previous.png" />
+    <EmbeddedResource Include="Resources\stop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>

@@ -28,7 +28,7 @@ namespace WebAPI.Controllers
         }
 
         // GET api/<ProductControllerController>/5
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetById")]
         public Product Get(int id)
         {
             return dataContext.Products.FirstOrDefault(p => p.Id == id);

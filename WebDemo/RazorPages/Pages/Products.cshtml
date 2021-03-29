@@ -1,0 +1,21 @@
+﻿@page
+@model ProductsModel
+@{
+}
+
+@if(Model.Products == null)
+{
+    <h1>No products?</h1>
+}
+else
+{
+    @foreach(var product in Model.Products)
+    {
+        <div class="card col-md-4">
+            <h2 class="">@product.Name</h2>
+            <img src="@product.ImageURL" />
+            <h3>Price: @product.Price</h3>
+        </div>
+    }
+
+}

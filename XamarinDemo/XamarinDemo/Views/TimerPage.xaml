@@ -1,12 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinDemo.Views.TimerPage">
+             x:Class="XamarinDemo.Views.TimerPage"
+             x:Name="Self"
+             xmlns:converters="clr-namespace:XamarinDemo.Converters"
+             xmlns:vm="clr-namespace:XamarinDemo.ViewModels"
+             >
+    <ContentPage.Resources>
+        <converters:BoolValueInverter x:Key="BoolValueInverter"/>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Picker Grid.Row="0"
+                    ItemsSource="{Binding Presets}"
+                    SelectedItem="{Binding SelectedPreset}"
+                    ItemDisplayBinding="{Binding Name}"/>
+            <Label Grid.Row="1" 
+                   Text="{Binding CurrentInterval.Name}" 
+                   VerticalTextAlignment="End" 
+                   HorizontalOptions="Center"
+                   FontSize="Large"/>
+            <Label Grid.Row="2" 
+                   Text="{Binding TimerText}" 
+                   VerticalTextAlignment="Center" 
+                   HorizontalOptions="Center"
+                   FontSize="Header"/>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <ImageButton Grid.Column="0" 
+                             Source="{Binding PreviousButtonImage, Source={Reference Self}}"
+                             Command="{Binding PreviousIntervalCommand}"
+                             IsVisible="{Binding HasPreviousInterval}"/>
+                <ImageButton Grid.Column="1" 
+                             Source="{Binding StopButtonImage, Source={Reference Self}}"
+                             Command="{Binding StopIntervalCommand}"/>
+                <ImageButton Grid.Column="2" 
+                             Source="{Binding StartButtonImage, Source={Reference Self}}"
+                             Command="{Binding StartIntervalCommand}"
+                             IsVisible="{Binding IsTimerRunning, Converter={StaticResource BoolValueInverter}}"/>
+                <ImageButton Grid.Column="2" 
+                             Source="{Binding PauseButtonImage, Source={Reference Self}}"
+                             Command="{Binding PauseIntervalCommand}"
+                             IsVisible="{Binding IsTimerRunning}"/>
+                <ImageButton Grid.Column="3" 
+                             Source="{Binding NextButtonImage, Source={Reference Self}}"
+                             Command="{Binding NextIntervalCommand}"
+                             IsVisible="{Binding HasNextInterval}"/>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

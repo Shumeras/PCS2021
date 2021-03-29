@@ -7,6 +7,8 @@ namespace XamarinDemo.Services
 {
     public interface IDataService
     {
+        event Action DataUpdateEvent;
+
         IList<Preset> GetPresets();
 
         void AddPreset(Preset preset);

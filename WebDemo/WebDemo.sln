@@ -5,7 +5,15 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{AB484ACC-566D-4C23-AB45-9B360CF181AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{E40B16DB-853B-4672-A99D-5AC2E5973853}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{E40B16DB-853B-4672-A99D-5AC2E5973853}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPages", "RazorPages\RazorPages.csproj", "{15066AB3-CBF8-43FE-9423-6B6822779DE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{3A60325B-0DD1-4615-83B0-DA6DF4CDC94C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerSide", "BlazorServerSide\BlazorServerSide.csproj", "{C4E92292-24F0-49BA-BC25-7FF8B7C02ACF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasm", "BlazorWasm\BlazorWasm.csproj", "{ADEADC5B-90FD-49A7-9F15-B7233EB835BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{E40B16DB-853B-4672-A99D-5AC2E5973853}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E40B16DB-853B-4672-A99D-5AC2E5973853}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E40B16DB-853B-4672-A99D-5AC2E5973853}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15066AB3-CBF8-43FE-9423-6B6822779DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15066AB3-CBF8-43FE-9423-6B6822779DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15066AB3-CBF8-43FE-9423-6B6822779DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15066AB3-CBF8-43FE-9423-6B6822779DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A60325B-0DD1-4615-83B0-DA6DF4CDC94C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A60325B-0DD1-4615-83B0-DA6DF4CDC94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A60325B-0DD1-4615-83B0-DA6DF4CDC94C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A60325B-0DD1-4615-83B0-DA6DF4CDC94C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E92292-24F0-49BA-BC25-7FF8B7C02ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E92292-24F0-49BA-BC25-7FF8B7C02ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E92292-24F0-49BA-BC25-7FF8B7C02ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E92292-24F0-49BA-BC25-7FF8B7C02ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADEADC5B-90FD-49A7-9F15-B7233EB835BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADEADC5B-90FD-49A7-9F15-B7233EB835BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADEADC5B-90FD-49A7-9F15-B7233EB835BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADEADC5B-90FD-49A7-9F15-B7233EB835BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

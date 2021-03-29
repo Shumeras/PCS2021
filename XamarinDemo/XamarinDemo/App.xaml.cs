@@ -11,6 +11,7 @@ namespace XamarinDemo
         public App()
         {
             DependencyService.Register<MockDataService>();
+            DependencyService.Register<SimpleTimerService>();
 
             InitializeComponent();
 

@@ -34,6 +34,9 @@ namespace XamarinDemo.Services
             }
 
         };
+
+        public event Action DataUpdateEvent = () => { };
+
         public IList<Preset> GetPresets()
         {
             return presets;
@@ -42,17 +45,20 @@ namespace XamarinDemo.Services
         public void AddPreset(Preset preset)
         {
             presets.Add(preset);
+            DataUpdateEvent();
         }
 
         public void DeletePreset(Preset preset)
         {
             presets.Remove(preset);
+            DataUpdateEvent();
         }
 
 
         public void UpdatePreset(Preset preset)
         {
             // Doesn't have to do anything
+            DataUpdateEvent();
         }
     }
 }

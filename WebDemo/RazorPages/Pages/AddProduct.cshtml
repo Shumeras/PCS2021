@@ -1,0 +1,11 @@
+﻿@page
+@model AddProductModel
+@{
+}
+<form method="post">
+    <input type="text" placeholder="Product Name" asp-for="ProductName" />
+    <input type="text" placeholder="0" asp-for="ProductPrice" />
+    <input type="text" placeholder="Image" asp-for="ProductImageUrl" />
+
+    <button type="submit">Create</button>
+</form>
