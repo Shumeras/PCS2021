@@ -1,0 +1,9 @@
+D:\Dev\PCS2021\WebDemo\Data\bin\Debug\netstandard2.1\Data.deps.json
+D:\Dev\PCS2021\WebDemo\Data\bin\Debug\netstandard2.1\Data.dll
+D:\Dev\PCS2021\WebDemo\Data\bin\Debug\netstandard2.1\Data.pdb
+D:\Dev\PCS2021\WebDemo\Data\obj\Debug\netstandard2.1\Data.csprojAssemblyReference.cache
+D:\Dev\PCS2021\WebDemo\Data\obj\Debug\netstandard2.1\Data.AssemblyInfoInputs.cache
+D:\Dev\PCS2021\WebDemo\Data\obj\Debug\netstandard2.1\Data.AssemblyInfo.cs
+D:\Dev\PCS2021\WebDemo\Data\obj\Debug\netstandard2.1\Data.csproj.CoreCompileInputs.cache
+D:\Dev\PCS2021\WebDemo\Data\obj\Debug\netstandard2.1\Data.dll
+D:\Dev\PCS2021\WebDemo\Data\obj\Debug\netstandard2.1\Data.pdb

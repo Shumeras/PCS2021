@@ -1,0 +1,18 @@
+﻿@page "/"
+@inject AuthenticationStateProvider auth
+
+<h1>Hello, world!</h1>
+
+<h2>And who are you?</h2>
+<input type="text" @bind-value="@text"/>
+<button @onclick ="@TextChanged">I'm a new person</button>
+
+@code{
+
+    private string text = "";
+
+    public void TextChanged()
+    {
+        ((CustomAuthStateProvider)auth).ChangeRole(text);
+    }
+}

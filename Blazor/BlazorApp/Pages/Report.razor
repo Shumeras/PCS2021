@@ -1,0 +1,70 @@
+﻿@page "/report"
+
+@inject DataContext dbContext
+@inject IJSRuntime jsRuntime
+
+<canvas style="width: 75%" @ref="canvasReference"></canvas>
+
+@code {
+
+    public List<Product> Products{ get; private set; }
+
+    public ElementReference canvasReference { get; set; }
+
+    [JSInvokable]
+    public Task<int[]> GetArray()
+    {
+        return Task.FromResult( new int[]{ 1,2,3});
+    }
+
+    protected override void OnInitialized()
+    {
+        Products = dbContext.Products.ToList();
+
+    }
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var rng = new Random();
+
+
+        var model = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./MyFunctions.js");
+
+        model.InvokeVoidAsync("writeToConsole", DotNetObjectReference.Create(this));
+
+        model.InvokeVoidAsync("drawGraph", canvasReference,
+         new{
+             type = "bar",
+             data = new
+             {
+                 labels = Products.Select(p => p.Name),
+                 datasets = new[]{
+                         new{
+                             label = "Price",
+                             data = Products.Select(p => p.Price),
+                             backgroundColor = Products.Select(p => $"rgba({rng.Next(0, 255)}, {rng.Next(0, 255)}, {rng.Next(0, 255)}, 0.2)"),
+                             borderColor = Products.Select(p => $"rgba({rng.Next(0, 255)}, {rng.Next(0, 255)}, {rng.Next(0, 255)}, 0.2)"),
+                             borderWidth = 1
+                         }
+                }
+             },
+             options = new
+             {
+                 scales = new
+                 {
+                     yAxes = new[]
+                    {
+                        new {
+                            ticks = new{
+                                beginAtZero = true
+                            }
+                        }
+                    }
+                 }
+             }
+         });
+        base.OnAfterRenderAsync(firstRender);
+    }
+
+}

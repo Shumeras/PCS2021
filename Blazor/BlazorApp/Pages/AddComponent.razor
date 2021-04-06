@@ -1,0 +1,46 @@
+﻿@page "/products/add" 
+@using Models
+
+@inject DataContext dbContext
+@inject IJSRuntime jsRuntime
+
+<EditForm Model="@ProductModel" OnValidSubmit="AddProduct" OnInvalidSubmit="OnInvalidSubmit">
+    <DataAnnotationsValidator/>
+    <label>Product name:</label>
+    <InputText @bind-Value="@ProductModel.Name"/> <br />
+
+    <label>Product price:</label>
+    <InputNumber @bind-Value="@ProductModel.Price" /> <br />
+
+    <label>Product image:</label>
+    <InputText @bind-Value="@ProductModel.ImageUrl"/> <br />
+    <ValidationSummary/>
+
+    <button class="btn btn-info" type="submit">Add Product</button>
+</EditForm>
+
+@code {
+    public ProductModel ProductModel { get; private set; } = new ProductModel();
+
+
+    public void OnInvalidSubmit()
+    {
+        jsRuntime.InvokeVoidAsync("alertBrowser", "Product failed");
+    }
+
+    public void AddProduct()
+    {
+        dbContext.Products.Add(
+            new Product{
+                Name = ProductModel.Name,
+                Price = ProductModel.Price,
+                ImageURL = ProductModel.ImageUrl
+            });
+        dbContext.SaveChangesAsync();
+
+        ProductModel = new ProductModel();
+
+
+    }
+
+}

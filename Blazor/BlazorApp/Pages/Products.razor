@@ -1,0 +1,33 @@
+﻿@page "/products"
+@inject DataContext context
+
+<h1>These are your products:</h1>
+<br/>
+
+@if(ProductList != null && ProductList.Count > 0 )
+{
+    <div class="productContainer">
+        @foreach(var product in ProductList)
+        {
+            <ProductCard Product="@product"/>
+        }
+    </div>
+}
+else
+{
+    <h4>Loading...</h4>
+}
+
+
+
+@code {
+
+    public List<Product> ProductList { get; private set; }
+
+    protected override Task OnInitializedAsync()
+    {
+        ProductList = context.Products.ToList();
+        return base.OnInitializedAsync();
+    }
+
+}

@@ -1,0 +1,39 @@
+﻿@page "/products/{Id:int?}"
+@inject DataContext dbContext
+@inject NavigationManager navManager
+
+@if(Product != null)
+{
+    <div>
+        <h3>@Product.Name</h3>
+        <img src="@Product.ImageURL" style="max-width:50%;"/>
+        <h4>Price: @Product.Price</h4>
+    </div>
+}
+
+
+@code {
+
+    [Parameter] public int? Id { get; set; }
+
+    public Product Product { get; set; }
+
+
+    protected override Task OnInitializedAsync()
+    {
+        Product = null;
+
+        if(Id.HasValue)
+            Product = dbContext.Products.FirstOrDefault(p => p.Id == Id.Value);
+
+        return base.OnInitializedAsync();
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (Product == null)
+            navManager.NavigateTo("/products");
+    }
+
+
+}

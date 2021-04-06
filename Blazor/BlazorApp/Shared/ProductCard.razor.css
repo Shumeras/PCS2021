@@ -1,0 +1,6 @@
+﻿.productCard
+{
+    flex-basis: 30%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
